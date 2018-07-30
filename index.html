@@ -37,7 +37,7 @@
         <nav class="menu">
             <div class="menu__wrap">
                 <div class="menu__wrap__content">
-                    <a class="menuIcon" href="#">
+                    <a id="menuBars" class="menuIcon">
                         <span class="menuIcon__bar"></span>
                     </a>
                 </div>
@@ -48,6 +48,21 @@
                 <a href="#" class="menu__wrap__search"><i class="fas fa-search"></i></a>
             </div>
         </nav>
+        
+        <div id="mobileMenu" class="mobileMenu">
+            <a id="mobileCross" class="mobileMenu__cross"></a>
+            <div class="mobileMenu__points">
+                <a class="mobileMenu__points__link" href="#">Watches</a>
+                <a class="mobileMenu__points__link" href="#">Services</a>
+                <a class="mobileMenu__points__link" href="#">FAQS</a>
+                <a class="mobileMenu__points__link" href="#">Contact</a>
+                <a class="mobileMenu__points__link" href="#">Request Virtual</a>
+                <p class="fullMenu__wrap__phone__number mobileMenu__points__number">
+                    <span class="handset"><i class="fas fa-phone-volume"></i></span>
+                    1(800)862 6772
+                </p>
+            </div>
+        </div>
         
         <nav class="fullMenu">
             <div class="fullMenu__wrap">
@@ -80,7 +95,7 @@
                     <button class="mainSlider__content__btn">Request Virtual Sample</button>
                 </div>
                 <div class="mainSlider__gradient"></div>
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide carousel-fade " data-ride="carousel">
                   <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active dot"></li>
                     <li class="dot" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -89,16 +104,15 @@
                   </ol>
                   <div class="carousel-inner">
                     <div class="carousel-item main-slide active image image1">
-                      
                     </div>
+                    
                     <div class="carousel-item main-slide image image2">
-                      <!-- <img class="d-block w-100 slideImage" src="img/watches2.jpeg" alt="Second slide"> -->
                     </div>
+                    
                     <div class="carousel-item main-slide image image3">
-                      <!-- <img class="d-block w-100 slideImage" src="img/watches3.jpeg" alt="Third slide"> -->
                     </div>
+                    
                     <div class="carousel-item main-slide image image3">
-                      <!-- <img class="d-block w-100 slideImage" src="img/watches3.jpeg" alt="Third slide"> -->
                     </div>
                   </div>
                 </div>
@@ -113,7 +127,7 @@
             <div class="company__bg">
                 <div class="company__bg__gradient"></div>
             </div>
-            <div id="companyCarousel" class="carousel slide company-slider" data-interval="false">
+            <div id="companyCarousel" class="carousel slide company-slider " data-interval="false">
               <div class="carousel-inner">
                 <div class="carousel-item company__item active">
                     <h2 class="company__header heading">Our Store</h2>
@@ -129,11 +143,9 @@
                 </div>
               </div>
               <div class="control-group">
-                  <a class="carousel-control-prev control-group__arrow" href="#companyCarousel" role="button" data-slide="prev" data-ride="false">
-                    <i class="fas fa-arrow-left"></i>
+                  <a class="carousel-control-prev control-group__arrow slick-prev" href="#companyCarousel" role="button" data-slide="prev" data-ride="false">
                   </a>
-                  <a class="carousel-control-next control-group__arrow" href="#companyCarousel" role="button" data-slide="next" data-ride="false">
-                    <i class="fas fa-arrow-right"></i>
+                  <a class="carousel-control-next control-group__arrow slick-next" href="#companyCarousel" role="button" data-slide="next" data-ride="false">
                   </a>
               </div>
             </div>
@@ -143,17 +155,17 @@
         
         
         <!-- COLLECTIONS SECTION -->
-        <section class="collections">
+        <section id="collections" class="collections">
             <div class="collections__header">
                 <h2 class="heading">Collections</h2>
                 <ul class="collections__header__list">
-                    <li class="collections__header__list__item"><a href="#" class="collections__header__list__item__link active-link">Latest</a></li>
-                    <li class="collections__header__list__item"><a href="#" class="collections__header__list__item__link">Popular</a></li>
+                    <li class="collections__header__list__item"><a id="latest-link" href="#collections" class="collections__header__list__item__link active-link">Latest</a></li>
+                    <li class="collections__header__list__item"><a id="popular-link" href="#collections" class="collections__header__list__item__link">Popular</a></li>
                 </ul>
             </div>
             <div class="collections__content">
                 <!-- LATEST TAB -->
-                <div class="latest collections__content-latest collection">
+                <div id="latest" class="latest collections__content-latest collection">
                     <div class="collection__slide">
                         <img class="collection__slide__img" src="img/slot1.png">
                         <h2 class="colection__slide__name heading">Adriatica adr</h2>
@@ -188,11 +200,17 @@
                 
                 
                 <!-- POPULAR TAB -->
-                <div class="popular collections__content-popular collection ">
+                <div id="popular" class="popular collections__content-popular collection">
                     <div class="collection__slide">
-                        <img class="collection__slide__img" src="img/slot1.png">
-                        <h2 class="colection__slide__name heading">Adriatica adr</h2>
-                        <h3 class="price">$650,00</h3>
+                        <img class="collection__slide__img" src="img/slot2.png">
+                        <h2 class="colection__slide__name heading">Seiko SNZGO7K1</h2>
+                        <h3 class="price">$125,00</h3>
+                    </div>
+                    
+                    <div class="collection__slide">
+                        <img class="collection__slide__img" src="img/slot3.png">
+                        <h2 class="colection__slide__name heading">Roamer rm 220837</h2>
+                        <h3 class="price">$250,00</h3>
                     </div>
                     
                     <div class="collection__slide">
@@ -202,9 +220,15 @@
                     </div>
                     
                     <div class="collection__slide">
-                        <img class="collection__slide__img" src="img/slot1.png">
-                        <h2 class="colection__slide__name heading">Adriatica adr</h2>
-                        <h3 class="price">$650,00</h3>
+                        <img class="collection__slide__img" src="img/slot2.png">
+                        <h2 class="colection__slide__name heading">Seiko SNZGO7K1</h2>
+                        <h3 class="price">$125,00</h3>
+                    </div>
+                    
+                    <div class="collection__slide">
+                        <img class="collection__slide__img" src="img/slot3.png">
+                        <h2 class="colection__slide__name heading">Roamer rm 220837</h2>
+                        <h3 class="price">$250,00</h3>
                     </div>
                 </div>
                 <!-- POPULAR TAB END -->
@@ -247,7 +271,7 @@
                 
                 <div class="user">
                     <div class="user__avatar">
-                        <img class="user__avatar__image" src="img/user2.jpeg" alt="jack">
+                        <img class="user__avatar__image" src="img/user2.jpeg" alt="marcus">
                     </div>
                     <div class="user-container">
                         <h2 class="heading user__name">
@@ -261,11 +285,25 @@
                 
                 <div class="user">
                     <div class="user__avatar">
-                        <img class="user__avatar__image" src="img/user3.jpeg" alt="jack">
+                        <img class="user__avatar__image" src="img/user3.jpeg" alt="sandra">
                     </div>
                     <div class="user-container">
                         <h2 class="heading user__name">
                             Sandra Williams
+                        </h2>
+                        <p class="user__review">
+                            As many of you know, our company has a wide field of activity: we are engaged in the development of products, publish design and code related articles, and support the Market, where designers publish their products to sell.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="user">
+                    <div class="user__avatar">
+                        <img class="user__avatar__image wide" src="img/user4.jpeg" alt="alice">
+                    </div>
+                    <div class="user-container">
+                        <h2 class="heading user__name">
+                            Alice Carrol
                         </h2>
                         <p class="user__review">
                             As many of you know, our company has a wide field of activity: we are engaged in the development of products, publish design and code related articles, and support the Market, where designers publish their products to sell.
@@ -282,7 +320,7 @@
         <footer class="footer">
             <div class="footer__content">
                 <div class="row justify-content-md-between">
-                    <div class="col-md-3">
+                    <div class="col-md-3 footer__content__logo">
                         <h2 class="footer__logo fullLogo">ALW</h2>
                         <p class="subLogo">American Logo Watch</p>
                     </div>
@@ -320,8 +358,8 @@
     </div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script type="text/javascript" src="js/collections.js"></script>
     <script type="text/javascript" src="js/feedback.js"></script>
