@@ -1,6 +1,6 @@
 $(document).ready(function() {    
     $('.users').slick({
-        dots: true,
+        arrows: true,
         infinite: true,
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -15,8 +15,8 @@ $(document).ready(function() {
             {
               breakpoint: 600,
               settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
+                slidesToShow: 1,
+                slidesToScroll: 1
               }
             },
             {
