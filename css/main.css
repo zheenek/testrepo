@@ -30,7 +30,8 @@ body {
   transform: translateY(-50%);
   left: 0;
   width: 1.8rem;
-  height: 100%; }
+  height: 100%;
+  cursor: pointer; }
   .menuIcon__bar {
     position: absolute;
     top: 50%;
@@ -128,6 +129,99 @@ body {
 
 .wide {
   width: 180%; }
+
+.searchModal__body {
+  width: 90%;
+  margin: 0 auto; }
+
+.search-input {
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  border: 1px solid #b6907e !important;
+  height: 4rem;
+  padding: 1rem;
+  color: #b6907e !important;
+  font-family: "PT Sans", "Segoe UI", sans-serif;
+  font-size: 1.4rem !important;
+  margin-bottom: 1rem; }
+  .search-input:focus {
+    box-shadow: none !important; }
+
+.search-btn {
+  background-color: #b6907e;
+  border-radius: 0 !important;
+  font-size: 1.6rem !important; }
+  .search-btn:hover {
+    background-color: #cea18c; }
+
+.signup, .searchModal {
+  background-color: #0e0e0e !important;
+  overflow: hidden !important; }
+  .signup__header, .searchModal__header {
+    margin-top: .5rem;
+    border-bottom: 0 !important;
+    background-color: #0e0e0e; }
+    .signup__header__heading, .searchModal__header__heading {
+      position: relative;
+      left: 10%;
+      text-align: center;
+      font-size: 2.8rem; }
+  .signup__body, .searchModal__body {
+    background-color: #0e0e0e; }
+    .signup__body__form, .searchModal__body__form {
+      width: 80%;
+      margin: 0 auto;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      flex-direction: column; }
+      .signup__body__form__input:empty, .searchModal__body__form__input:empty {
+        background-color: transparent;
+        border: 1px solid #767676;
+        height: 4rem;
+        padding: 1rem;
+        color: #767676;
+        font-family: "PT Sans", "Segoe UI", sans-serif;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        -webkit-transition: border-color .2s ease;
+        -o-transition: border-color .2s ease;
+        transition: border-color .2s ease; }
+        .signup__body__form__input:empty:valid, .searchModal__body__form__input:empty:valid {
+          border-color: #b6907e;
+          color: #b6907e; }
+        .signup__body__form__input:empty:invalid:not(:placeholder-shown), .searchModal__body__form__input:empty:invalid:not(:placeholder-shown) {
+          border-color: crimson;
+          color: crimson; }
+      .signup__body__form__label, .searchModal__body__form__label {
+        color: #b6907e;
+        font-family: "Bebas Neue Bold", sans-serif;
+        letter-spacing: 3px;
+        font-size: 1.6rem; }
+  .signup__footer, .searchModal__footer {
+    border-top: 0 !important;
+    background-color: #0e0e0e; }
+    .signup__footer__btn, .searchModal__footer__btn {
+      margin: 0 auto;
+      padding: 0 !important;
+      width: 80%;
+      font-family: "Bebas Neue Bold", sans-serif;
+      font-size: 2rem !important;
+      border-radius: 0 !important;
+      letter-spacing: 3px;
+      color: #0e0e0e;
+      background-color: #b6907e;
+      height: 5rem; }
+      .signup__footer__btn:hover, .searchModal__footer__btn:hover {
+        background-color: #cea18c; }
+
+.close-btn {
+  position: relative;
+  right: 1.4rem;
+  color: #fff !important;
+  font-size: 2rem !important; }
 
 .header {
   position: fixed;
@@ -266,6 +360,8 @@ body {
       right: 0;
       color: #fff;
       font-size: 1.6rem; }
+      .menu__wrap__search:hover {
+        color: #b6907e; }
 
 .fullMenu {
   display: none;
@@ -712,11 +808,15 @@ body {
     text-align: center;
     margin: 0 auto;
     font-family: "PT Sans", "Segoe UI", sans-serif; }
+    .collection__slide:hover {
+      background-color: #0e0e0e; }
     @media (min-width: 56.25em) {
       .collection__slide {
         padding: 2rem;
         border: 1px solid #333333;
         margin: 3rem; } }
+    .collection__slide__link:hover {
+      text-decoration: none; }
     .collection__slide__img {
       width: 100%;
       margin-bottom: 2.5rem; }

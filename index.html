@@ -20,14 +20,14 @@
             <div class="header__content">
                 <p class="header__content__text">Custom Logo Watches & More, Free Shipping & Returns</p>
                 <div class="header__content__icons">
-                    <a href="#" class="header__content__icons__icon search"><i class="fas fa-search"></i></a>
+                    <a href="#" class="header__content__icons__icon search" data-toggle="modal" data-target="#searchModal" ><i class="fas fa-search"></i></a>
                     <a href="#" class="header__content__icons__icon">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="header__content__icons__icon--count">
                             <span class="header__content__icons__icon--count--digit">0</span>
                         </span>
                     </a>
-                    <a href="#" class="header__content__icons__icon"><i class="far fa-user"></i></a>
+                    <a href="#" class="header__content__icons__icon" data-toggle="modal" data-target="#signupModal"><i class="far fa-user"></i></a>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
                     <h2 class="logo">ALW</h2>
                 </div>
                 
-                <a href="#" class="menu__wrap__search"><i class="fas fa-search"></i></a>
+                <a href="#" class="menu__wrap__search" data-toggle="modal" data-target="#searchModal"><i class="fas fa-search"></i></a>
             </div>
         </nav>
         
@@ -84,6 +84,57 @@
                 </div>
             </div>
         </nav>
+
+        <!-- SignUp Modal -->
+        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content  signup">
+              <div class="modal-header signup__header">
+                <h5 class="heading signup__header__heading">Sign Up</h5>
+                <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body signup__body">
+                <form class="signup__body__form" action="">
+                    <label class="signup__body__form__label" for="username">Username</label>
+                    <input class="signup__body__form__input" id="username" required type="text" placeholder="Type username...">
+                    <label class="signup__body__form__label" for="mail">Email</label>
+                    <input class="signup__body__form__input" id="mail" required type="email" placeholder="Type email...">
+                    <label class="signup__body__form__label" for="password">Password</label>
+                    <input class="signup__body__form__input" id="password" required type="password" placeholder="Type password...">
+                </form>
+              </div>
+              <div class="modal-footer signup__footer">
+                <button type="button" class="btn signup__footer__btn">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SignUp Modal End -->
+        
+        
+        <!-- Search Modal -->
+        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content searchModal">
+              <div class="modal-header searchModal__header">
+                <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body searchModal__body">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control search-input" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                  <div class="input-group-append">
+                    <button class="btn search-btn" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Search Modal End -->
         <!-- MENU END-->
         
         <!-- SECTION 1 -->
@@ -167,33 +218,43 @@
                 <!-- LATEST TAB -->
                 <div id="latest" class="latest collections__content-latest collection">
                     <div class="collection__slide">
-                        <img class="collection__slide__img" src="img/slot1.png">
-                        <h2 class="colection__slide__name heading">Adriatica adr</h2>
-                        <h3 class="price">$650,00</h3>
+                        <a href="#" class="collection__slide__link">
+                            <img class="collection__slide__img" src="img/slot1.png">
+                            <h2 class="colection__slide__name heading">Adriatica adr</h2>
+                            <h3 class="price">$650,00</h3>
+                        </a>
                     </div>
                     
                     <div class="collection__slide">
-                        <img class="collection__slide__img" src="img/slot2.png">
-                        <h2 class="colection__slide__name heading">Seiko SNZGO7K1</h2>
-                        <h3 class="price">$125,00</h3>
+                        <a href="#" class="collection__slide__link">
+                            <img class="collection__slide__img" src="img/slot2.png">
+                            <h2 class="colection__slide__name heading">Seiko SNZGO7K1</h2>
+                            <h3 class="price">$125,00</h3>
+                        </a>
                     </div>
                     
                     <div class="collection__slide">
-                        <img class="collection__slide__img" src="img/slot3.png">
-                        <h2 class="colection__slide__name heading">Roamer rm 220837</h2>
-                        <h3 class="price">$250,00</h3>
+                        <a href="#" class="collection__slide__link">
+                            <img class="collection__slide__img" src="img/slot3.png">
+                            <h2 class="colection__slide__name heading">Roamer rm 220837</h2>
+                            <h3 class="price">$250,00</h3>
+                        </a>
                     </div>
                     
                     <div class="collection__slide">
-                        <img class="collection__slide__img" src="img/slot2.png">
-                        <h2 class="colection__slide__name heading">Seiko SNZGO7K1</h2>
-                        <h3 class="price">$125,00</h3>
+                        <a href="#" class="collection__slide__link">
+                            <img class="collection__slide__img" src="img/slot2.png">
+                            <h2 class="colection__slide__name heading">Seiko SNZGO7K1</h2>
+                            <h3 class="price">$125,00</h3>
+                        </a>
                     </div>
                     
                     <div class="collection__slide">
-                        <img class="collection__slide__img" src="img/slot3.png">
-                        <h2 class="colection__slide__name heading">Roamer rm 220837</h2>
-                        <h3 class="price">$250,00</h3>
+                        <a href="#" class="collection__slide__link">
+                            <img class="collection__slide__img" src="img/slot3.png">
+                            <h2 class="colection__slide__name heading">Roamer rm 220837</h2>
+                            <h3 class="price">$250,00</h3>
+                        </a>
                     </div>
                 </div>
                 <!-- LATEST TAB END -->
@@ -202,33 +263,43 @@
                 <!-- POPULAR TAB -->
                 <div id="popular" class="popular collections__content-popular collection">
                     <div class="collection__slide">
-                        <img class="collection__slide__img" src="img/slot2.png">
-                        <h2 class="colection__slide__name heading">Seiko SNZGO7K1</h2>
-                        <h3 class="price">$125,00</h3>
+                        <a href="#" class="collection__slide__link">
+                            <img class="collection__slide__img" src="img/slot2.png">
+                            <h2 class="colection__slide__name heading">Seiko SNZGO7K1</h2>
+                            <h3 class="price">$125,00</h3>
+                        </a>
                     </div>
                     
                     <div class="collection__slide">
-                        <img class="collection__slide__img" src="img/slot3.png">
-                        <h2 class="colection__slide__name heading">Roamer rm 220837</h2>
-                        <h3 class="price">$250,00</h3>
+                        <a href="#" class="collection__slide__link">
+                            <img class="collection__slide__img" src="img/slot3.png">
+                            <h2 class="colection__slide__name heading">Roamer rm 220837</h2>
+                            <h3 class="price">$250,00</h3>
+                        </a>
                     </div>
                     
                     <div class="collection__slide">
-                        <img class="collection__slide__img" src="img/slot1.png">
-                        <h2 class="colection__slide__name heading">Adriatica adr</h2>
-                        <h3 class="price">$650,00</h3>
+                        <a href="#" class="collection__slide__link">
+                            <img class="collection__slide__img" src="img/slot1.png">
+                            <h2 class="colection__slide__name heading">Adriatica adr</h2>
+                            <h3 class="price">$650,00</h3>
+                        </a>
                     </div>
                     
                     <div class="collection__slide">
-                        <img class="collection__slide__img" src="img/slot2.png">
-                        <h2 class="colection__slide__name heading">Seiko SNZGO7K1</h2>
-                        <h3 class="price">$125,00</h3>
+                            <a href="#" class="collection__slide__link">
+                            <img class="collection__slide__img" src="img/slot2.png">
+                            <h2 class="colection__slide__name heading">Seiko SNZGO7K1</h2>
+                            <h3 class="price">$125,00</h3>
+                        </a>
                     </div>
                     
                     <div class="collection__slide">
-                        <img class="collection__slide__img" src="img/slot3.png">
-                        <h2 class="colection__slide__name heading">Roamer rm 220837</h2>
-                        <h3 class="price">$250,00</h3>
+                        <a href="#" class="collection__slide__link">
+                            <img class="collection__slide__img" src="img/slot3.png">
+                            <h2 class="colection__slide__name heading">Roamer rm 220837</h2>
+                            <h3 class="price">$250,00</h3>
+                        </a>
                     </div>
                 </div>
                 <!-- POPULAR TAB END -->
