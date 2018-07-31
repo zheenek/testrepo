@@ -737,10 +737,14 @@ body {
           font-size: 1.6rem; } }
 
 .control-group {
-  width: 3rem;
-  position: absolute;
-  top: 3rem;
-  left: 10%; }
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  top: 3rem; }
+  .control-group__inner {
+    width: 2rem;
+    position: absolute;
+    left: 2.4rem; }
   .control-group__arrow {
     margin: 0; }
 
